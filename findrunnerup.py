@@ -24,4 +24,20 @@ Given list is . The maximum score is , second maximum is . Hence, we print  as t
 """
 
 def find_runner_up():
+    n = int(input())
+    arr = map(int, input().split())
+    a = sorted(arr)
+    r_a = a[::-1]
+    compare_num = 0
+    one_step = 0
+    if r_a:
+        compare_num = r_a[0]
+        one_step = compare_num - 1
+    for v in r_a:
+        if v <= one_step:
+            print(v)
+            break
+
+if __name__ == '__main__':
+    find_runner_up()
     
